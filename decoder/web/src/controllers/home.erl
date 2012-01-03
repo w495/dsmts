@@ -14,6 +14,7 @@
 -include("../include/web.hrl").
 
 
+
 index(Req, {_, [Self_parent, Item_parent | _ ],   [Xsl_root | _ ]}) ->
     case Req:get_cookie_value(?SPEC) of
         "true" ->
@@ -23,17 +24,22 @@ index(Req, {_, [Self_parent, Item_parent | _ ],   [Xsl_root | _ ]}) ->
     end,
 
     Data = Req:parse_qs(),
-    
-    Source_text = proplists:get_value("source", Data, []),
-    Source = [
-        {"text", Source_text}
+
+
+    Source      = [
+        {"text",  proplists:get_value("source", Data, [])}
     ],
 
-    Target = internal_decode(Source_text),
-    
 
 
-    
+    Target_old  = [
+        {"text",          proplists:get_value("target", Data, [])},
+        {"perplexity",    proplists:get_value("perplexity", Data, 0)},
+        {"times",         proplists:get_value("times", Data, 0)}
+    ],
+
+    Target = internal_decode({Source, Target_old}),
+
     Meta = [
             {"current-path",        Req:get(path)},
             {"parent-path",         Self_parent},
@@ -62,13 +68,21 @@ rest(Req, {Raw_source_text, _,   _}) ->
     Target_text = internal_decode(Source_text),
     {?OUTPUT_TEXT, [], [Target_text]}.
 
-internal_decode(Source_text) ->
-    Tagret_text = Source_text,
-    Perplexity = 0.1
-    Target = [
-        {"text", Tagret_text}
-        {"Perplexity ", Perplexity }
-    ],
-    Tagret_text.
+
+internal_decode({Source, Target}) ->
+
+    io:format("{Source, Target} = ~p", [{Source, Target}]),
+
+    Perplexity =
+        convert:to_integer(proplists:get_value("perplexity", Target)) + 1,
+
+    Times =
+        convert:to_integer(proplists:get_value("times", Target)) + 1,
+
+    [
+        {"text",          proplists:get_value("text", Source)},
+        {"perplexity",    Perplexity},
+        {"times",         Times}
+    ].
 
 

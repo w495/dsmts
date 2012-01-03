@@ -157,9 +157,9 @@
             <xsl:when test="/data/target/text != ''">
                 <input type="submit" value="Улучшить"/>
                 <div class="e-hidden-output">
-                    <input type="hidden" name="perplexity" value="/data/target/perplexity"/>
+                    <input type="hidden" name="perplexity" value="{/data/target/perplexity}"/>
                         <xsl:comment>КОЭФИЦИЕНТ НЕОПРЕДЕЛЕННОСТИ</xsl:comment> 
-                    <input type="hidden" name="times" value="/data/target/times"/>
+                    <input type="hidden" name="times" value="{/data/target/times}"/>
                         <xsl:comment>ЧИСЛО РАЗ</xsl:comment> 
                 </div>
             </xsl:when>

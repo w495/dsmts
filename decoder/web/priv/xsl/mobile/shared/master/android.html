@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=0.5, width=device-width, target-densitydpi=device-dpi, minimum-scale=0.1, user-scalable=no">
+<script src="http://code.jquery.com/jquery-1.4.4.js"></script>
+<script type="application/javascript" src="js/iscroll.js"></script>
+<script type="application/javascript" src="js/mini.js"></script>
+<script type="text/javascript">
+var myScroll,
+	hoverClassRegEx = new RegExp('(^|\\s)iScrollHover(\\s|$)'),
+	removeClass = function () {
+		if (this.hoverTarget) {
+			clearTimeout(this.hoverTimeout);
+			this.hoverTarget.className = this.hoverTarget.className.replace(hoverClassRegEx, '');
+			this.target = null;
+		}
+	};
+function loaded() {
+	myScroll = new iScroll('content', {
+		onBeforeScrollStart: function (e) {
+			var target = e.target;
+
+			clearTimeout(this.hoverTimeout);
+
+			while (target.nodeType != 1) target = target.parentNode;
+
+			this.hoverTimeout = setTimeout(function () {
+				if (!hoverClassRegEx.test(target.className)) target.className = target.className ? target.className + ' iScrollHover' : 'iScrollHover';
+			}, 80);
+
+			this.hoverTarget = target;
+			
+			e.preventDefault();
+		},
+		onScrollMove: removeClass,
+		onBeforeScrollEnd: removeClass,
+        zoomMin: 1
+	});
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+<title>МЧС России - мобильная версия интернет-портала</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="user">
+<div id="head-container">
+	<div id="top-line">
+		<div>Защита населения от&nbsp;чрезвычайных ситуаций <br />
+		природного и&nbsp;техногенного характера на&nbsp;транспорте
+		</div>
+		<form id="search-form" action="#" method="GET">
+			<input id="search-field"  
+				type="text" 
+				size="32" 
+				placeholder="Поисковый запрос">
+			<input id="search-submitter"  type="button" 
+				value="искать" >
+		</form>
+	</div>
+</div>
+<div id="content" style="top: 90px !important; bottom: 90px !important;">
+	<div id="scroller">
+		<div id="logo-line">
+			<img src="images/logo-trans.png" alt="МЧС России" />
+		</div>
+		<div class="head-line">
+			Виды транспорта
+		</div>
+		<div class="item1">
+			<a href="#">
+				<div class="itev_txt">
+					Наземный транспорт
+					<div style="height:2px;"></div>
+				</div>
+			</a>
+		</div>
+		<div class="item2">
+			<a href="#">
+				<div class="itev_txt">
+					Воздушный транспорт
+					<div style="height:2px;"></div>
+				</div>
+			</a>
+		</div>
+		<div class="item1">
+			<a href="#">
+				<div class="itev_txt">
+					Водный транспорт
+					<div style="height:2px;"></div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div id="footer"><table width="100%" height="90" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td align="center">
+		<a href="#"><img src="images/home.png" width="58" height="90"></a>
+	</td>
+	<td align="center">
+		<a href="#">
+			<img src="images/news.png" width="58" height="90"></a>
+	</td>
+	<td align="center">
+		<a href="#">
+			<img src="images/menu.png" width="58" height="90"></a>
+	</td>
+</tr></table></div>
+</div>
+
+<script type="text/javascript"> 
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript"> 
+	try {
+	var pageTracker = _gat._getTracker("UA-15347927-2");
+	pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+</body>
+</html>

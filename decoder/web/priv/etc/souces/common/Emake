@@ -1,0 +1,21 @@
+#!/usr/bin/env escript
+
+-define(NDEBUG, [{outdir,"ebin"}]).
+-define(DEBUG,  [debug_info | ?NDEBUG]).
+
+%---------------------------------------------------------------
+main([]) ->
+    do_make(?NDEBUG);
+main([Args]) ->
+    Debug = string:str(Args, "debug"),
+    if Debug > 0 -> do_make(?DEBUG);
+    true -> do_make(?NDEBUG) end.
+
+do_make(Opts) ->
+    io:format("Build options: ~p~n", [Opts]),
+    Rc = make:all(Opts),
+    io:format("~p~n", [Rc]),
+    if Rc == error ->
+        halt(1);
+    true -> ok
+    end.

@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE xsl:stylesheet [ <!ENTITY nbsp "&#160;"> ]>
+
+    
+<areas>
+    <area>
+        <name>Северо-Западный региональный центр</name>
+        <tr>north-west</tr>
+        <item>
+            <name>ГУ МЧС России по Архангельской области</name>
+            <code>29</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Вологодской области</name>
+            <code>35</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ленинградской области</name>
+            <code>47</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Мурманской области</name>
+            <code>51</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Псковской области</name>
+            <code>60</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ненецкому АО</name>
+            <code>83</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по республике Карелия</name>
+            <code>10</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по республике Коми</name>
+            <code>11</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Санкт-Петербургу</name>
+            <code>78</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Новгородской области</name>
+            <code>53</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Калининградской области</name>
+            <code>39</code>
+        </item>
+    </area>
+    <area>
+        <name>Центральный региональный центр</name>
+        <tr>center</tr>
+        <item>
+            <name>ГУ МЧС России по Белгородской области</name>
+            <code>31</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Брянской области</name>
+            <code>32</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Владимирской области</name>
+            <code>33</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Воронежской области</name>
+            <code>36</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ивановской области</name>
+            <code>37</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Калужской области</name>
+            <code>40</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Костромской области</name>
+            <code>44</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Курской области</name>
+            <code>46</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Липецкой области</name>
+            <code>48</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Московской области</name>
+            <code>50</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Орловской области</name>
+            <code>57</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Рязанской области</name>
+            <code>62</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Смоленской области</name>
+            <code>67</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Тамбовской области</name>
+            <code>68</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Тверской области</name>
+            <code>69</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Тульской области</name>
+            <code>71</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ярославской области</name>
+            <code>76</code>
+        </item>
+    </area>
+    <area>
+        <name>Южный региональный центр</name>
+        <tr>south</tr>
+        <item>
+            <name>ГУ МЧС России по Астраханской области</name>
+            <code>30</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Волгоградской области</name>
+            <code>34</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Краснодарскому краю</name>
+            <code>23</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Адыгея</name>
+            <code>01</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Калмыкия</name>
+            <code>08</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ростовской области</name>
+            <code>61</code>
+        </item>
+    </area>
+    <area>
+        <name>Северо-Кавказский региональный центр</name>
+        <tr>north-kavkaz</tr>
+        <item>
+            <name>ГУ МЧС России по Республике Ингушетия</name>
+            <code>06</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Дагестан</name>
+            <code>05</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Кабардино-Балкарской Республике</name>
+            <code>07</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Карачаево-Черкесской Республике</name>
+            <code>09</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Северная Осетия - Алания</name>
+            <code>15</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ставропольскому краю</name>
+            <code>26</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Чеченской Республике</name>
+            <code>95</code>
+        </item>
+    </area>
+    <area>
+        <name>Приволжский региональный центр</name>
+        <tr>volga</tr>
+        <item>
+            <name>ГУ МЧС России по Кировской области</name>
+            <code>43</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Нижегородской области</name>
+            <code>52</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Оренбургской области</name>
+            <code>56</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Пензенской области</name>
+            <code>58</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Пермскому краю</name>
+            <code>59</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Башкортостан</name>
+            <code>02</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Марий Эл</name>
+            <code>12</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Мордовия</name>
+            <code>13</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Татарстан</name>
+            <code>16</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Самарской области</name>
+            <code>63</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Саратовской области</name>
+            <code>64</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Удмуртской Республике</name>
+            <code>18</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ульяновской области</name>
+            <code>73</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Чувашской Республике</name>
+            <code>21</code>
+        </item>
+    </area>
+    <area>
+        <name>Уральский региональный центр</name>
+        <tr>ural</tr>
+        <item>
+            <name>ГУ МЧС России по Свердловской области</name>
+            <code>66</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Курганской области</name>
+            <code>45</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Тюменской области</name>
+            <code>72</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Челябинской области</name>
+            <code>74</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ямало-Ненецкому автономному округу</name>
+            <code>89</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Ханты-Мансийскому автономному округу</name>
+            <code>86</code>
+        </item>
+    </area>
+    <area>
+        <name>Сибирский региональный центр</name>
+        <tr>sibiria</tr>
+        <item>
+            <name>ГУ МЧС России по Республике Алтай</name>
+            <code>04</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Тыва</name>
+            <code>17</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Хакасия</name>
+            <code>19</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Бурятия</name>
+            <code>03</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Алтайскому краю</name>
+            <code>22</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Иркутской области</name>
+            <code>38</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Кемеровской области</name>
+            <code>42</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Новосибирской области</name>
+            <code>54</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Омской области</name>
+            <code>55</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Томской области</name>
+            <code>70</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Красноярскому краю</name>
+            <code>24</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Забайкальскому краю</name>
+            <code>75</code>
+        </item>
+    </area>
+    <area>
+        <name>Дальневосточный региональный центр</name>
+        <tr>east</tr>
+        <item>
+            <name>ГУ МЧС России по Амурской области</name>
+            <code>28</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Еврейской автономной области</name>
+            <code>79</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Камчатскому краю</name>
+            <code>41</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Магаданской области</name>
+            <code>49</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Приморскому краю</name>
+            <code>25</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Республике Саха (Якутия)</name>
+            <code>14</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Сахалинской области</name>
+            <code>65</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Хабаровскому краю</name>
+            <code>27</code>
+        </item>
+        <item>
+            <name>ГУ МЧС России по Чукотскому автономному округу</name>
+            <code>87</code>
+        </item>
+    </area>
+</areas>

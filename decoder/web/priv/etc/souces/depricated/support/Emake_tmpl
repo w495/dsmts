@@ -1,0 +1,11 @@
+#!/usr/bin/env escript
+%%! -pa ../ebin
+
+%---------------------------------------------------------------
+main([File]) ->
+    Rc = erltl:compile(File, [{outdir,"../ebin"}]),
+    io:format("~p~n", [Rc]),
+    if Rc /= ok ->
+        halt(1);
+    true -> ok
+    end.

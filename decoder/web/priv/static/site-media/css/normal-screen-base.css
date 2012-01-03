@@ -1,0 +1,33 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+    outline: none;
+    border: none;
+    font-family: sans-serif, verdana;
+}
+
+output{
+    display: block;
+}
+
+.b-header-group{
+    display: block;
+    color: black;
+}
+
+.text-output{
+    background-color: white;
+    margin: 0.5em;
+    width: 390px;
+    height: 390px;
+    border: solid 1px gray;
+}
+
+.e-input{
+
+    
+}
+
+.e-output{
+
+}

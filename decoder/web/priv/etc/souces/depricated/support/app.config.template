@@ -1,0 +1,26 @@
+%% minimal tty
+[
+%    {sasl,[ {sasl_error_logger, {file, "./priv/logs/sasl.log" }},
+%        {errlog_type, error}
+%        ]
+%    },
+
+    {web, [
+        {site_owner, "tvzavr"},
+        {log_level, error},
+        {cookiename, "CDNCONTROLSYSTEM"},
+        {expcookie, 180000}, % in seconds  300 min
+        {web_session_gc_period, 600000}, % 10 min
+        {web_session_expire_timeout, 180000}, % in sec 300 min
+        {lsthost, "0.0.0.0"},
+        {lstport, 8000},
+        {max_auth_error, 10},
+        {ldap_host, "192.168.2.110"},
+        {ldap_dn, "uid=avuser,ou=People,o=AVProjects"},
+        {ldap_passwd, "avuser"}
+    ]},
+
+ {kernel, [ {start_pg2, true}%,
+          ]
+ }
+].

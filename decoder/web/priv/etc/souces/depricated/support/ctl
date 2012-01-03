@@ -1,0 +1,31 @@
+#!/bin/sh
+
+CMD=$1
+NODENAME="`date +web_ctl_%H_%M_%S_%N`@192.168.2.110"
+## NODEMAIN="web@192.168.2.190"
+NODEMAIN="web@85.175.153.180"
+
+COOKIE=OCFDAZSCILRVUEHEWFWA
+
+ERL_ARGS="+K true +A 128 +P 1000000"
+
+LOCALLBINPATH=`find ./ebin -type d -printf '%h/%f '`
+OTHERBINPATH="./deps/*/ebin"
+BINPATH=${LOCALLBINPATH}${OTHERBINPATH}
+
+if [ "$CMD" != "start" ]; then
+  erl \
+    -noinput \
+    -pz $LOCALLBINPATH \
+    -name ${NODENAME} \
+    -s ctl \
+    -hidden \
+    -connect_all false \
+    ${ERL_ARGS} \
+    -extra -n ${NODEMAIN} \
+    "$@"
+else
+  shift
+  ./start.sh $@
+fi
+

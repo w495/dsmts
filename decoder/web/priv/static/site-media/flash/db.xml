@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+
+	<round time="400" score="200" save_bonus="50" fix_bonus="50" penalty="1">
+		<emergency id="shipfire0" wait="10" />
+		<emergency id="dtp0" wait="50" />
+		<emergency id="electrotrainfire0" wait="50" />
+		<emergency id="planecrash0" wait="50" />
+		<emergency id="fire0" wait="50" />
+		<emergency id="planefire0" wait="50" />
+		<emergency id="dtp0" wait="50" />
+		<emergency id="electrotrainfire0" wait="50" />
+	</round>
+
+	<type id="vehicle" name="техника" />
+	<type id="boat" name="техника" />
+	<type id="helicopter" name="вертолет" />
+	<type id="specialist" name="специалист" />
+	<type id="plane" name="самолет" />
+
+	<emergency id="dtp0" name="Дорожно-транспортное проишествие" save_time="180" casualties="0-10" penalty="1" >
+		<unit id="police0" fix="10" />
+		<unit id="policeman0" fix="60" />
+		<unit id="firetruck0" fix="10" />
+		<unit id="fireman0" fix="40" />
+		<unit id="ambulance0" save="10" />
+		<unit id="medic0" save="60" />
+	</emergency>
+
+	<emergency id="fire0" name="Пожар в здании метро" save_time="180" casualties="0-20" penalty="1" >
+		<unit id="firetruck0" fix="20" />
+		<unit id="fireman0" fix="80" />
+		<unit id="rescue0" save="20" />
+		<unit id="rescuer0" save="100" />
+		<unit id="ambulance0" save="30" />
+		<unit id="medic0" save="120" />
+	</emergency>
+
+	<emergency id="planecrash0" name="Авиакатастрофа" save_time="120" casualties="0-10" penalty="1" >
+		<unit id="firetruck0" fix="20" />
+		<unit id="fireman0" fix="80" />
+		<unit id="rescue0" save="30" />
+		<unit id="rescuer0" save="120" />
+		<unit id="ambulance0" save="20" />
+		<unit id="medic0" save="80" />
+	</emergency>
+
+	<emergency id="planefire0" name="Пожар на самолете" save_time="180" casualties="0-20" penalty="1" >
+		<unit id="rescue0" save="10" />
+		<unit id="rescuer0" save="60" />
+		<unit id="firetruck0" fix="10" />
+		<unit id="fireman0" fix="40" />
+		<unit id="ambulance0" save="10" />
+		<unit id="medic0" save="60" />
+	</emergency>
+
+	<emergency id="electrotrainfire0" name="Пожар на электропоезде" save_time="180" casualties="0-20" penalty="1" >
+		<unit id="rescue0" save="10" />
+		<unit id="rescuer0" save="60" />
+		<unit id="firetruck0" fix="10" />
+		<unit id="fireman0" fix="40" />
+		<unit id="ambulance0" save="10" />
+		<unit id="medic0" save="60" />
+	</emergency>
+
+	<emergency id="metrotrainfire0" name="Пожар на поезде метро" save_time="180" casualties="0-20" penalty="1" >
+		<unit id="rescue0" save="10" />
+		<unit id="rescuer0" save="60" />
+		<unit id="firetruck0" fix="10" />
+		<unit id="fireman0" fix="40" />
+		<unit id="ambulance0" save="10" />
+		<unit id="medic0" save="60" />
+	</emergency>
+
+	<emergency id="shipfire0" name="Пожар на теплоходе" save_time="180" casualties="0-20" penalty="1" >
+		<unit id="rescueboat0" save="10" />
+		<unit id="rescuer0" save="20" />
+		<unit id="firetruck0" fix="10" />
+		<unit id="fireman0" fix="40" />
+		<unit id="ambulance0" save="10" />
+		<unit id="medic0" save="60" />
+	</emergency>
+
+	<unit id="ambulance0" name="Автомобиль скорой помощи" type="vehicle" base="hospital" quantity="2" price="100" capacity="5" />
+	<unit id="ambulanceheli0" name="Вертолет скорой помощи" type="helicopter" base="hospital" quantity="0" price="300" capacity="5" />
+	<unit id="medic0" name="Врач" type="specialist" base="hospital" transport="ambulance0" quantity="12" price="50" />
+
+	<unit id="rescue0" name="Автомобиль спасателей" type="vehicle" base="fire_depo" quantity="2" price="70" capacity="5" />
+	<unit id="rescueboat0" name="Катер спасателей" type="boat" base="port" quantity="1" price="100" capacity="5" />
+	<unit id="rescuer0" name="Спасатель" type="specialist" base="fire_depo,port" transport="rescue0,rescueboat0" quantity="7" price="40" />
+	
+	<unit id="firetruck0" name="Пожарный автомобиль" type="vehicle" base="fire_depo" quantity="2" price="120" capacity="7" />
+	<unit id="fireman0" name="Пожарный" type="specialist" base="fire_depo" transport="firetruck0" quantity="16" price="40" />
+	
+	<unit id="police0" name="Полицейский автомобиль" type="vehicle" base="police_office" quantity="2" price="30" capacity="5" />
+	<unit id="policeman0" name="Полицейский" type="specialist" base="police_office" transport="police0" quantity="8" price="20" />
+	
+	<unit id="crane0" name="Автокран" type="vehicle" base="fire_depo" quantity="0" price="100" capacity="3" />
+	<unit id="truck0" name="Грузовой автомобиль" type="vehicle" base="fire_depo" quantity="5" price="60" capacity="3" />
+</content>

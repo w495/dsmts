@@ -1,0 +1,28 @@
+#!/bin/sh
+
+
+CMD=$1
+NODENAME="`date +web_ctl_%H_%M_%S_%N`@localhost"
+NODEMAIN="web@localhost"
+
+ERL_ARGS="+K true"
+
+LOCALLBINPATH=`find ./ebin -type d -printf '%h/%f '`
+OTHERBINPATH="./deps/*/ebin"
+BINPATH=${LOCALLBINPATH}${OTHERBINPATH}
+
+if [ "$CMD" != "start" ]; then
+  erl \
+    -noinput \
+    -pz $BINPATH \
+    -sname ${NODENAME} \
+    -s ctl \
+    -hidden \
+    -connect_all false \
+    ${ERL_ARGS} \
+    -extra -n ${NODEMAIN} \
+    "$@"
+else
+  shift
+  ./start_dev.sh $@ -detached
+fi

@@ -1,0 +1,16 @@
+*~
+*.beam
+*.bup
+*.log
+*.dump
+*.swp
+*.app
+*.so
+*.trace
+
+*priv/data*
+*priv/logs*
+
+*stub.*
+
+deps/*
